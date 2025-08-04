@@ -12,7 +12,7 @@ function App() {
       return;
     }
 
-    fetch(`http://localhost:3600?code=${encodeURIComponent(code)}`)
+    fetch(`http://localhost:3600/syndicate/oauth?code=${encodeURIComponent(code)}`)
       .then(res => res.text())
       .then(data => setResponse(`✅ Response:\n${data}`))
       .catch(err => setResponse(`❌ Error:\n${err.message}`));
